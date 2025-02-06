@@ -2071,3 +2071,9 @@ a {
 .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff !important
 }
+
+.footer-rights{
+    text-align: center;
+    color: rgb(116, 116, 116);
+    padding: 10px 0;
+}
