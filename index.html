@@ -43,7 +43,7 @@
     </style>
 
     <script>
-        function yash() {
+        const yash=()=> {
             const input = document.getElementById("Input").value.toLowerCase();
             const responseBox = document.getElementById("response");
 
@@ -92,7 +92,16 @@
             const utterThis = new SpeechSynthesisUtterance(response);
             synth.cancel(); // cancel any previous speech
             synth.speak(utterThis);
+
+            clearData();
         }
+
+         clearData=()=>{
+            const input = document.getElementById("Input").value="".toLowerCase();
+            const responseBox = document.getElementById("response").value="";
+
+        }
+        
 
 
     </script>
