@@ -40,57 +40,6 @@
                 margin-left: 0
             }
         }
-        /* Achivents */
-     
-
-/* Grid Gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
-}
-
-.gallery img {
-    width: 220px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-/* Hover Zoom */
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
-/* Popup */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup img {
-    width: 60%;
-    border-radius: 10px;
-}
-
-#close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    cursor: pointer;
-}
-        /* end */
     </style>
 
     <script>
@@ -154,21 +103,7 @@
         }
 
         // achivment
-        const images = document.querySelectorAll(".gallery img");
-const popup = document.getElementById("popup");
-const popupImg = document.getElementById("popup-img");
-const closeBtn = document.getElementById("close");
-
-images.forEach(img => {
-    img.addEventListener("click", () => {
-        popup.style.display = "flex";
-        popupImg.src = img.src;
-    });
-});
-
-closeBtn.onclick = () => {
-    popup.style.display = "none";
-};
+      
 
 
     </script>
@@ -330,22 +265,7 @@ closeBtn.onclick = () => {
             </a>
 
             <!-- Achivments -->
-            <div class="w3-row w3-center w3-padding-16 w3-light-grey">
-                <h3 class="w3-padding-16 w3-text-light-grey w3-opacity w3-hover-opacity-off">Patent
-            </h3>
-                <div class="gallery">
-                        <img style="width: 120px;" src="SmartHawarbord.jpg" alt="SmartHawarbord">
-                        <img style="width: 120px;" src="RobotForExploration.jpg" alt="RobotForExploration">
-                        <img style="width: 120px;" src="BirdandDroneDetector.jpg" alt="BirdandDroneDetector">
-                        <!-- Popup Viewer -->
-                        <div class="popup" id="popup">
-                            <span id="close">&times;</span>
-                            <img id="popup-img">
-                        </div>
-                </div>
-                
-                
-            </div>
+            
 
             <!-- Grid for pricing tables -->
             <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
